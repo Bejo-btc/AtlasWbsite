@@ -100,7 +100,6 @@ button {
   width: 100%;
   background-color: transparent;
   object-fit: cover;
-  width: 40px;
 }
 
 @media (max-width :660px) {
@@ -150,9 +149,13 @@ button {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   padding: 14px;
   border-radius: 15px;
+  background-image: url("");
 }
 
 .cards span {
@@ -160,6 +163,9 @@ button {
   font-weight: 400;
   margin-bottom: 8px;
   display: block;
+}
+.cards span  i{
+  color: #121f61
 }
 
 .cards p {
@@ -182,6 +188,11 @@ button {
   width: 100%;
 }
 
+@media (max-width:767px){
+  .land-image{
+    height: 50vh;
+  }
+}
 /* .//////////hero section //////////// */
 
 .hero {
