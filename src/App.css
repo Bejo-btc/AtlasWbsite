@@ -608,6 +608,7 @@ footer .logo {
 .text {
   display: grid;
   align-items: end;
+  color:white;
 }
 
 @media (max-width: 661px) {
@@ -627,6 +628,7 @@ footer .logo {
   .footer-info>div>p {
     margin-bottom: 15px;
     line-height: 1.6;
+    color:white;
   }
 }
 
@@ -652,6 +654,7 @@ footer a {
 
 footer h6 {
   margin-bottom: 16px;
+  color:white;
 }
 
 footer button {
