@@ -10,28 +10,28 @@ function Houses() {
       </div>
       <div className='card-flex'>
         <div className="house-card">
-          <div className='home-card'>
+          <div className='home-card-lan'>
             <div className="home-info">
               <h6>خبره واسعه في السوق</h6>
               <span>تفقد العقارات</span>
             </div>
             <img src="\Frame 2085663186.png" alt="home-img" className="home-img" />
           </div>
-          <div className='home-card'>
+          <div className='home-card-lan'>
             <div className="home-info">
               <h6>خبره واسعه في السوق</h6>
               <span>تفقد العقارات</span>
             </div>
             <img src="\Frame 2085663188.webp" alt="home-img" className="home-img" />
           </div>
-          <div className='home-card'>
+          <div className='home-card-lan'>
             <div className="home-info">
               <h6>خبره واسعه في السوق</h6>
               <span>تفقد العقارات</span>
             </div>
             <img src="\Frame 2085663187.webp" alt="home-img" className="home-img" />
           </div>
-          <div className='home-card'>
+          <div className='home-card-lan'>
             <div className="home-info">
               <h6>خبره واسعه في السوق</h6>
               <span>تفقد العقارات</span>

@@ -223,7 +223,7 @@ button {
   border-radius: 7px;
 }
 
-.info {
+.hero-info {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -308,12 +308,12 @@ button {
   justify-content: center;
 }
 
-.home-card {
+.home-card-lan {
   /* background-size: cover; */
   display: grid;
   align-items: flex-end;
   height: 300px;
-  width: 305px;
+  width: 300px;
   color: white;
   text-align: right;
   padding: 10px;
@@ -321,8 +321,8 @@ button {
 }
 
 @media (max-width:660px) {
-  .home-card {
-    width: 100%;
+  .home-card-lan {
+    width: 305px;
   }
 
   .house-card {
@@ -330,7 +330,7 @@ button {
   }
 }
 
-.home-card .home-img {
+.home-card-lan .home-img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -362,11 +362,15 @@ button {
   text-align: center;
 }
 
-@media (max-width: 661px) {
+@media (max-width: 767px) {
   .about-info-flex {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .about-card {
+    width: 300px !important;
   }
 }
 
@@ -380,7 +384,7 @@ button {
 
 .about-card {
   position: relative;
-  width: 300px;
+  width: 200px;
   padding: 19px;
   background-color: #f7f7f7;
   border-radius: 15px;
@@ -557,6 +561,7 @@ footer {
   padding: 25px;
   color: white;
   position: relative;
+  overflow: hidden;
 }
 
 footer .Group {
