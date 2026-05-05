@@ -1,24 +1,68 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
 import "./header.css"
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <header>
-     <Link to="/contact"> <button>تواصل معنا </button></Link>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <nav>
-          <ul>
-            <Link to="/"><li>الرئيسية</li></Link>
-            <Link to="/infoPage"><li>العقارات</li></Link>
-            <Link to="/homes"><li>الخدمات</li></Link>
-            <Link to="/contact"><li>التواصل</li></Link>
-          </ul>
-        </nav>
-        <div>
-          <img src="/image-5.jpg" alt="logo" className="logo" />
+    <>
+      <header>
+        <Link to="/contact" className="contact-btn">
+          <button>تواصل معنا</button>
+        </Link>
+        
+        <div className="header-content">
+          <nav className={`nav ${isOpen ? 'open' : ''}`}>
+            <ul>
+              <Link to="/" onClick={closeMenu}>
+                <li>الرئيسية</li>
+              </Link>
+              <Link to="/infoPage" onClick={closeMenu}>
+                <li>العقارات</li>
+              </Link>
+              <Link to="/homes" onClick={closeMenu}>
+                <li>الخدمات</li>
+              </Link>
+              <Link to="/contact" onClick={closeMenu}>
+                <li>التواصل</li>
+              </Link>
+            </ul>
+          </nav>
+          
+          <div className="logo-container">
+            <img src="/image-5.jpg" alt="logo" className="logo" />
+          </div>
         </div>
-      </div>
-    </header>
+
+        {/* Burger Icon */}
+        <button 
+          className={`burger-menu ${isOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      {/* Overlay for mobile menu */}
+      {isOpen && (
+        <div 
+          className="menu-overlay" 
+          onClick={closeMenu}
+        ></div>
+      )}
+    </>
   );
 }
 
