@@ -23,6 +23,15 @@ html {
   margin-right: 20px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 li {
   list-style: none;
 }
@@ -129,6 +138,20 @@ button {
   width: 70%;
 }
 
+@media (max-width: 768px) {
+  .landing-content p {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-content p {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
 .landing-content button a {
   color: white;
 }
@@ -146,6 +169,14 @@ button {
   display: flex;
   gap: 10px;
   margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .card {
@@ -153,11 +184,18 @@ button {
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-  ;
   background-color: white;
   padding: 14px;
   border-radius: 15px;
   background-image: url("");
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: auto;
+    width: 100%;
+  }
 }
 
 .cards span {
@@ -234,6 +272,14 @@ button {
   border-radius: 12px;
   border: none;
   margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .hero-info {
+    flex-direction: column;
+    padding: 12px;
+  }
 }
 
 .info p {
@@ -517,6 +563,19 @@ button {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .sup-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-img {
+    width: 100% !important;
+    max-width: 300px;
+  }
 }
 
 .sup-text {
@@ -547,6 +606,14 @@ button {
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .support input {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
 .support span {
   margin-top: 25px;
 }
@@ -564,6 +631,13 @@ footer {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  footer {
+    height: auto;
+    padding: 20px 15px;
+  }
+}
+
 footer .Group {
   position: absolute;
   bottom: 0;
@@ -571,6 +645,16 @@ footer .Group {
   width: 400px;
   height: 100%;
   z-index: 55;
+}
+
+@media (max-width: 768px) {
+  footer .Group {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0;
+    margin-top: 20px;
+  }
 }
 
 
@@ -634,6 +718,12 @@ footer .logo {
 
 .footer-container .footer-info>p {
   width: 650px;
+}
+
+@media (max-width: 768px) {
+  .footer-container .footer-info>p {
+    width: 100%;
+  }
 }
 
 footer a {

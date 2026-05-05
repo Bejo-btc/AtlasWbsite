@@ -10,8 +10,6 @@
     margin: 0;
 }
 
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -36,39 +34,137 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-
-
 .landing {
     padding-bottom: 50px;
 }
 
 header {
     position: absolute;
-    left: 53%;
+    left: 50%;
     top: 2%;
-    width: calc(100% - 20%);
+    width: calc(100% - 40px);
     transform: translateX(-50%);
     z-index: 55;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 ul {
-    padding: 20px;
+    padding: 10px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-end;
 }
 
 li {
     margin-right: 12px;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 button {
     background-color: var(--background-color);
     color: white;
     border: none;
-    padding: 10px 50px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px;
     outline: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: none;
+        flex-direction: column-reverse;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+
+    header > div {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+        padding: 5px;
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    li {
+        margin-right: 0;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 5px;
+        gap: 10px;
+    }
+
+    ul {
+        gap: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-right: 0;
+        font-size: 11px;
+        padding: 3px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    .logo {
+        width: 45px;
+    }
 }
