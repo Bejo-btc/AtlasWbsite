@@ -17,12 +17,6 @@ li {
    padding: 20px;
 }
 
-.homes-container {
-   padding-left: 15px;
-   padding-right: 15px;
-   margin-left: 20px;
-   margin-right: 20px;
-}
 
 .real-estate {
    background-image: url("/public/Frame 2085663198.webP");
@@ -347,21 +341,21 @@ header img {
    font-weight: bold;
 }
 
-.buliding > button {
+.buliding>button {
    padding: 10px 50px;
    font-weight: bold;
    font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
-   .buliding > button {
+   .buliding>button {
       padding: 8px 30px;
       font-size: 1.2rem;
    }
 }
 
 @media (max-width: 480px) {
-   .buliding > button {
+   .buliding>button {
       padding: 6px 20px;
       font-size: 1rem;
    }
@@ -417,15 +411,10 @@ header img {
 @media (max-width: 768px) {
    .home-card {
       height: 250px;
-      width: 100%;
+      width: 250px;
    }
 }
 
-@media (max-width: 480px) {
-   .home-card {
-      height: 200px;
-   }
-}
 
 .home-card .home-img {
    position: absolute;
@@ -456,7 +445,7 @@ header img {
    margin-bottom: 30px;
 }
 
-.buliding-sime > h1 {
+.buliding-sime>h1 {
    text-align: right;
    margin: 20px 0px 30px;
 }

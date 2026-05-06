@@ -16,12 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 
-container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
+
 
 li {
   list-style: none;
@@ -80,8 +75,16 @@ button {
 
 .landing-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
+
+@media (max-width:767px) {
+  .landing-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 .hero-grid {
   display: grid;
@@ -91,11 +94,6 @@ button {
   align-items: stretch;
 }
 
-.landing img {
-  width: 100%;
-  background-color: transparent;
-  object-fit: cover;
-}
 
 @media (max-width :660px) {
   .landing img {
@@ -153,14 +151,15 @@ button {
 
 .cards {
   display: flex;
+  flex-direction: row;
   gap: 10px;
   margin-bottom: 16px;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .cards {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
   }
 }
@@ -679,7 +678,7 @@ footer .logo {
 .text {
   display: grid;
   align-items: end;
-  color:white;
+  color: white;
 }
 
 @media (max-width: 661px) {
@@ -699,7 +698,7 @@ footer .logo {
   .footer-info>div>p {
     margin-bottom: 15px;
     line-height: 1.6;
-    color:white;
+    color: white;
   }
 }
 
@@ -731,7 +730,7 @@ footer a {
 
 footer h6 {
   margin-bottom: 16px;
-  color:white;
+  color: white;
 }
 
 footer button {
