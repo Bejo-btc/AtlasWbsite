@@ -1,9 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './homes.css';
 import Header from '../component/header';
 
 function Homes() {
+   const [currentSlide, setCurrentSlide] = useState(0);
+   const [autoPlay, setAutoPlay] = useState(true);
+
+   const images = [
+      '/Frame 2085663200.png',
+      '/Frame 2085663201.webP',
+      '/Frame 2085663202.webP',
+      '/Frame 2085663203.webP'
+   ];
+
+   // Auto-play slider with 3 second delay
+   useEffect(() => {
+      if (!autoPlay) return;
+      
+      const interval = setInterval(() => {
+         setCurrentSlide((prev) => (prev + 1) % images.length);
+      }, 3000); // 3 second delay
+
+      return () => clearInterval(interval);
+   }, [autoPlay, images.length]);
+
+   const goToSlide = (index) => {
+      setCurrentSlide(index);
+      setAutoPlay(false);
+      // Resume auto-play after 5 seconds of user interaction
+      setTimeout(() => setAutoPlay(true), 5000);
+   };
+
+   const nextSlide = () => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+      setAutoPlay(false);
+      setTimeout(() => setAutoPlay(true), 5000);
+   };
+
+   const prevSlide = () => {
+      setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+      setAutoPlay(false);
+      setTimeout(() => setAutoPlay(true), 5000);
+   };
+
    return (
       <div className="homes-container">
          <div className="real-estate">
@@ -28,7 +68,7 @@ function Homes() {
                   </div>
                   <div className="card">
                      <div>
-                        <h3>مزقت االايجار</h3>
+                        <h3>مزقت الايجار</h3>
                         <span>موقع الخرائط </span>
                      </div>
                      <p> الخرطوم  – حي الصحافة – شارع الصحافه</p>
@@ -56,20 +96,52 @@ function Homes() {
                </div>
             </div>
          </div>
-         {/* Buliding section */}
+
+         {/* Image Slider Section for تشطيبات */}
          <div className="buliding">
             <h1>صور التشطيبات</h1>
-            <div className="buliding-imgs">
-               <img src="/Frame 2085663200.png" alt="buliding-img" />
-               <img src="/Frame 2085663201.webP" alt="buliding-img" />
-               <img src="/Frame 2085663202.webP" alt="buliding-img" />
-               <img src="/Frame 2085663203.webP" alt="buliding-img" />
+            
+            <div className="slider-container">
+               <div className="slider-wrapper">
+                  <div className="slider-track" style={{
+                     transform: `translateX(-${currentSlide * 100}%)`,
+                     transition: 'transform 0.5s ease-in-out'
+                  }}>
+                     {images.map((image, index) => (
+                        <div key={index} className="slider-slide">
+                           <img src={image} alt={`buliding-img-${index}`} />
+                        </div>
+                     ))}
+                  </div>
+               </div>
+
+               {/* Navigation Buttons */}
+               <button className="slider-btn slider-btn-prev" onClick={prevSlide}>
+                  ❮
+               </button>
+               <button className="slider-btn slider-btn-next" onClick={nextSlide}>
+                  ❯
+               </button>
+
+               {/* Dots Indicator */}
+               <div className="slider-dots">
+                  {images.map((_, index) => (
+                     <button
+                        key={index}
+                        className={`dot ${index === currentSlide ? 'active' : ''}`}
+                        onClick={() => goToSlide(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                     />
+                  ))}
+               </div>
             </div>
+
             <div className="buliding-btn">
-               <Link to="./contact"><button>تواصل معنا لحجز زياره</button></Link>
+               <Link to="/contact"><button>تواصل معنا لحجز زياره</button></Link>
             </div>
          </div>
-         {/* Buliding sime section */}
+
+         {/* Similar Properties Section */}
          <div className="buliding-sime">
             <h1>تفقد عقارات مشابهه</h1>
             <div className='card-flex'>

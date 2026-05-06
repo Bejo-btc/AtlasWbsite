@@ -24,57 +24,63 @@ li {
    margin-right: 20px;
 }
 
-.real-estate{
+@media (max-width: 768px) {
+   .homes-container {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+   }
+}
+
+.real-estate {
    background-image: url("/public/Frame 2085663198.webP");
-   background-size: cover ;
+   background-size: cover;
    background-position: top;
    width: 100%;
-   height: 500px ;
-   border-radius:30px; 
+   height: 500px;
+   border-radius: 30px;
    position: relative;
    margin-bottom: 50px;
-   position: relative;
 }
-/*
-.real-estate::after{
-   content:"";
-   position: absolute;
-   z-index: 88;
-   width: 100%;
-   height: 100%;
-   background-color: #1E1F2A;
-  left: 0;
-  top: 0;
+
+@media (max-width: 768px) {
+   .real-estate {
+      height: 350px;
+   }
 }
-*/
 
-
+@media (max-width: 480px) {
+   .real-estate {
+      height: 250px;
+   }
+}
 
 button {
-  background-color: var(--background-color);
-  color: white;
-  border: none;
-  padding: 10px 50px;
-  cursor: pointer;
-  border-radius: 30px;
-  outline: none;
+   background-color: var(--background-color);
+   color: white;
+   border: none;
+   padding: 10px 50px;
+   cursor: pointer;
+   border-radius: 30px;
+   outline: none;
 }
-  
-  
-nav{
+
+nav {
    display: flex;
    align-items: center;
    color: white;
    font-weight: bold;
 }
- header img {
+
+header img {
    width: 100%;
    background-color: transparent;
    object-fit: cover;
    width: 80px;
 }
 
-.land-info{
+.land-info {
    position: absolute;
    bottom: 8%;
    right: 5%;
@@ -82,104 +88,302 @@ nav{
    text-align: right;
    background-color: beige;
    font-weight: bold;
-   width:fit-content;
+   width: fit-content;
    padding: 15px;
-   border-radius:20px;
+   border-radius: 20px;
 }
-.land-info p{
+
+.land-info p {
    width: 500px;
    margin-top: 10px;
 }
 
-/*///////*/
+@media (max-width: 768px) {
+   .land-info {
+      bottom: 5%;
+      right: 3%;
+      padding: 10px;
+   }
 
-.real-estate-info  {
-   display: flex; 
-   gap: 10px;
-   justify-content: center;
-   padding-bottom:30px;
+   .land-info p {
+      width: 300px;
+      font-size: 12px;
+   }
 }
 
-.real-estate-info  img{
+@media (max-width: 480px) {
+   .land-info {
+      bottom: 3%;
+      right: 2%;
+      padding: 8px;
+   }
+
+   .land-info p {
+      width: 200px;
+      font-size: 10px;
+   }
+}
+
+.real-estate-info {
+   display: flex;
+   gap: 10px;
+   justify-content: center;
+   padding-bottom: 30px;
+   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+   .real-estate-info {
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+.real-estate-info img {
    width: 416px;
    border-radius: 15px;
    position: relative;
 }
 
-.real-estate-info img::after{
-  content: "عماره";
-  position:absolute;
-  top: 50%;
-  left:50%;
-  background-color: var(--background-color);
-  color: white;
-  border: none;
-  padding: 10px 50px;
-  cursor: pointer;
-  border-radius: 30px;
-  outline: none;
-  z-index: 33;
-  width: 10px;
-  height: 10px;
+@media (max-width: 768px) {
+   .real-estate-info img {
+      width: 100%;
+      max-width: 400px;
+   }
 }
 
-.real-estate-info .cards{
-   display: grid; 
-   grid-template-columns: repeat(2, 1fr); 
-   grid-template-rows: repeat(2, 1fr);    
+.real-estate-info img::after {
+   content: "عماره";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   background-color: var(--background-color);
+   color: white;
+   border: none;
+   padding: 10px 50px;
+   cursor: pointer;
+   border-radius: 30px;
+   outline: none;
+   z-index: 33;
+   width: 10px;
+   height: 10px;
+}
+
+.real-estate-info .cards {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
    gap: 15px;
    overflow: hidden;
 }
 
+@media (max-width: 768px) {
+   .real-estate-info .cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+   }
+}
 
-.real-estate-info .card{
+.real-estate-info .card {
    background-color: #B1B1B3;
    padding: 15px;
-   border-radius:15px;
+   border-radius: 15px;
    width: 200px;
    height: 300px;
    text-align: right;
    display: flex;
-   justify-content: space-between ;
+   justify-content: space-between;
    flex-direction: column;
 }
 
-/*////////*/
-
-.buliding-imgs{
-   display: flex;
-   grid-template-columns:repeat (3,1fr);
-   justify-content: center;
-   gap:12px;
-   padding-bottom: 30px;
+@media (max-width: 768px) {
+   .real-estate-info .card {
+      width: 100%;
+      height: auto;
+      min-height: 250px;
+   }
 }
-.buliding h1{
+
+/* Image Slider Styles */
+.slider-container {
+   position: relative;
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto 30px;
+   background-color: #f0f0f0;
+   border-radius: 12px;
+   overflow: hidden;
+}
+
+.slider-wrapper {
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+   border-radius: 12px;
+}
+
+.slider-track {
+   display: flex;
+   width: 100%;
+   transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+   min-width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.slider-slide img {
+   width: 100%;
+   height: auto;
+   max-height: 400px;
+   object-fit: cover;
+   border-radius: 12px;
+}
+
+/* Slider Navigation Buttons */
+.slider-btn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(36, 49, 117, 0.8);
+   color: white;
+   border: none;
+   padding: 12px 16px;
+   font-size: 20px;
+   cursor: pointer;
+   border-radius: 50%;
+   z-index: 10;
+   transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+   background-color: rgba(36, 49, 117, 1);
+}
+
+.slider-btn-prev {
+   left: 10px;
+}
+
+.slider-btn-next {
+   right: 10px;
+}
+
+/* Slider Dots */
+.slider-dots {
+   position: absolute;
+   bottom: 15px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 8px;
+   z-index: 10;
+}
+
+.dot {
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background-color: rgba(255, 255, 255, 0.5);
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   padding: 0;
+}
+
+.dot.active {
+   background-color: rgba(255, 255, 255, 1);
+   width: 14px;
+   height: 14px;
+}
+
+.dot:hover {
+   background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+   .slider-slide img {
+      max-height: 300px;
+   }
+
+   .slider-btn {
+      padding: 10px 14px;
+      font-size: 18px;
+   }
+
+   .dot {
+      width: 10px;
+      height: 10px;
+   }
+
+   .dot.active {
+      width: 12px;
+      height: 12px;
+   }
+}
+
+@media (max-width: 480px) {
+   .slider-slide img {
+      max-height: 250px;
+   }
+
+   .slider-btn {
+      padding: 8px 12px;
+      font-size: 16px;
+   }
+
+   .slider-dots {
+      bottom: 10px;
+      gap: 6px;
+   }
+
+   .dot {
+      width: 8px;
+      height: 8px;
+   }
+
+   .dot.active {
+      width: 10px;
+      height: 10px;
+   }
+}
+
+.buliding h1 {
    text-align: right;
-   margin: 0px 30px 25px 0px ;
+   margin: 0px 30px 25px 0px;
    font-weight: bold;
 }
 
-
-.buliding-imgs img{
-   width: 200px;
-   border-radius: 12px;
-}
-.buliding  > button{
-
-padding: 10px 50px;  
-font-weight: bold;
-font-size: 1.5rem;
+.buliding > button {
+   padding: 10px 50px;
+   font-weight: bold;
+   font-size: 1.5rem;
 }
 
-.buliding-btn{
-display:flex;
- justify-content: center;
- align-items: center;
-padding-bottom:30px; 
+@media (max-width: 768px) {
+   .buliding > button {
+      padding: 8px 30px;
+      font-size: 1.2rem;
+   }
 }
 
-/*////////*/
-.houses-header{
+@media (max-width: 480px) {
+   .buliding > button {
+      padding: 6px 20px;
+      font-size: 1rem;
+   }
+}
+
+.buliding-btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 30px;
+}
+
+.houses-header {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -187,58 +391,81 @@ padding-bottom:30px;
 }
 
 .house-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 0;
-  margin-bottom: 25px;
-  background-color: transparent;
-  align-items: center;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   gap: 10px;
+   padding: 0;
+   margin-bottom: 25px;
+   background-color: transparent;
+   align-items: center;
+}
+
+@media (max-width: 768px) {
+   .house-card {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   }
+}
+
+@media (max-width: 480px) {
+   .house-card {
+      grid-template-columns: 1fr;
+   }
 }
 
 .home-card {
-  /* background-size: cover; */
-  display: grid;
-  align-items: flex-end;
-  height: 300px;
-  width: 200px;
-  color: white;
-  text-align: right;
-  padding: 10px;
-  position: relative;
+   display: grid;
+   align-items: flex-end;
+   height: 300px;
+   width: 200px;
+   color: white;
+   text-align: right;
+   padding: 10px;
+   position: relative;
+}
+
+@media (max-width: 768px) {
+   .home-card {
+      height: 250px;
+      width: 100%;
+   }
+}
+
+@media (max-width: 480px) {
+   .home-card {
+      height: 200px;
+   }
 }
 
 .home-card .home-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 15px;
 }
 
 .home-info {
-  position: relative;
-  z-index: 333333;
+   position: relative;
+   z-index: 333333;
 }
 
 .houses-btn button {
-  text-align: right;
-  background-color: var(--background-color);
-  color: white;
-  border: none;
-  padding: 10px 50px;
-  cursor: pointer;
-  border-radius: 20px;
-  outline: none;
+   text-align: right;
+   background-color: var(--background-color);
+   color: white;
+   border: none;
+   padding: 10px 50px;
+   cursor: pointer;
+   border-radius: 20px;
+   outline: none;
 }
 
-/*///////*/
-.buliding-sime{
-   background-color:#C5C6D1;
-   padding: 10px ;
+.buliding-sime {
+   background-color: #C5C6D1;
+   padding: 10px;
    margin-bottom: 30px;
 }
 
-.buliding-sime > h1{
+.buliding-sime > h1 {
    text-align: right;
    margin: 20px 0px 30px;
 }
