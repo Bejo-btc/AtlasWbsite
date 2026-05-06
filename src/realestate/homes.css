@@ -109,6 +109,7 @@ header img {
       width: 300px;
       font-size: 12px;
    }
+   
 }
 
 @media (max-width: 480px) {
@@ -356,21 +357,21 @@ header img {
    font-weight: bold;
 }
 
-.buliding > button {
+.buliding>button {
    padding: 10px 50px;
    font-weight: bold;
    font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
-   .buliding > button {
+   .buliding>button {
       padding: 8px 30px;
       font-size: 1.2rem;
    }
 }
 
 @media (max-width: 480px) {
-   .buliding > button {
+   .buliding>button {
       padding: 6px 20px;
       font-size: 1rem;
    }
@@ -416,7 +417,7 @@ header img {
    display: grid;
    align-items: flex-end;
    height: 300px;
-   width: 200px;
+   width: 300px;
    color: white;
    text-align: right;
    padding: 10px;
@@ -433,6 +434,7 @@ header img {
 @media (max-width: 480px) {
    .home-card {
       height: 200px;
+      width: 300px;
    }
 }
 
@@ -465,7 +467,7 @@ header img {
    margin-bottom: 30px;
 }
 
-.buliding-sime > h1 {
+.buliding-sime>h1 {
    text-align: right;
    margin: 20px 0px 30px;
 }

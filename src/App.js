@@ -6,13 +6,13 @@ import Houses from './component/Houses';
 import About from './component/About';
 import Rentmanegment from './component/Rentmanegment';
 import Support from './component/Support';
-import Footer from "./component/Footer";
+import Footer from "./component/footer/Footer"
 import InfoPage from "./Info/InfoPage"; // 2. استيراد الصفحة التي تريد الذهاب إليها
 import Homes from './realestate/homes';
 import Contact from "./contact/contact"
 function App() {
   return (
-    <div className='container'>
+    <div>
       {/* 3. استخدام Routes لتنظيم التنقل بين الصفحات */}
       <Routes>
         {/* الصفحة الرئيسية (/) تعرض كل المكونات */}

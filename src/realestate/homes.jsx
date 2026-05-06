@@ -57,7 +57,7 @@ function Homes() {
             <div>
                <img src="/land-img.png" alt="real-estate-info-img" />
             </div>
-            <div>
+            <div style={{padding: '20px' }}>
                <div className="cards">
                   <div className="card">
                      <div>

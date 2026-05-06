@@ -1,0 +1,164 @@
+/* footer//////////// */
+:root {
+    --background-color: #243175;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+    background-color: #18204B;
+    height: 300px;
+    padding: 25px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+        padding: 20px 15px;
+    }
+}
+
+footer .Group {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 400px;
+    height: 100%;
+    z-index: 55;
+}
+
+@media (max-width: 768px) {
+    footer .Group {
+        width: 100%;
+        height: auto;
+        left: 0;
+        margin-top: 20px;
+    }
+}
+
+
+.footer-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    /* width:50%; */
+    display: inline-block;
+    text-align: right;
+
+}
+
+footer .logo {
+    width: 10%;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    direction: rtl;
+}
+
+.text {
+    display: grid;
+    align-items: end;
+    color: white;
+}
+
+@media (max-width: 661px) {
+    footer {
+        height: 100%;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        direction: rtl;
+        text-align: center;
+        margin-bottom: 13px;
+    }
+
+    .footer-info>div>p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+        color: white;
+    }
+}
+
+.footer-container .footer-info>p {
+    width: 650px;
+}
+
+@media (max-width: 768px) {
+    .footer-container .footer-info>p {
+        width: 100%;
+    }
+}
+
+footer a {
+    color: white;
+}
+
+@media (max-width: 661px) {
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.foo-number {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+footer h6 {
+    margin-bottom: 16px;
+    color: white;
+}
+
+footer button {
+    background-color: var(--background-color);
+    color: white;
+    border: none;
+    padding: 13px 50px;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+}
