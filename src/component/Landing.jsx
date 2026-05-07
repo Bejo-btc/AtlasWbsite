@@ -8,7 +8,7 @@ function Landing() {
       <div className='landing-grid'>
         <div className='land-image' />
         <div className='landing-content'>
-          <h1>شركة رائدة في مجال التكنولوجيا</h1>
+          <h1>شركة رائدة في مجال العقار </h1>
           <p>نحن نقدم حلول تكنولوجية مبتكرة تلبي احتياجات عملائنا وتساعدهم على تحقيق أهدافهم.</p>
           <Link to="/InfoPage">
             <button> ابدارحلتك العقاريه </button>
