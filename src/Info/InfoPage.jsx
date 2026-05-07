@@ -20,7 +20,6 @@ function Info() {
             {/* cards section */}
             <div className="house-card">
 
-
                <div className='home-card'>
                   <div className="home-info">
                      <h6>خبره واسعه في السوق</h6>

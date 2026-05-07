@@ -155,7 +155,6 @@ button {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
-        position: relative;
         width: 100%;
         left: 0;
         top: 0;
