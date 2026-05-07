@@ -43,16 +43,6 @@ function Header() {
           </div>
         </div>
 
-        {/* Burger Icon */}
-        <button 
-          className={`burger-menu ${isOpen ? 'active' : ''}`}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </header>
 
       {/* Overlay for mobile menu */}

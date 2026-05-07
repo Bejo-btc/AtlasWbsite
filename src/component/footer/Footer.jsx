@@ -30,7 +30,7 @@ function Footer() {
                   <li><a href="#">Twitter</a></li>
                   <li><a href="#">Youtube</a></li>
                </ul>
-               <span> جميع الحقوق محفوظه</span>
+               <span style={{margin: "25px"}}> جميع الحقوق محفوظه</span>
                   <Link to="/contact"> <button>تواصل معنا </button></Link>
             </div>
          </div>

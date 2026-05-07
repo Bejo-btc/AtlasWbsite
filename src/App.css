@@ -27,6 +27,8 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+
+
 .landing {
   padding-bottom: 50px;
 }
@@ -86,6 +88,7 @@ button {
   gap: 15px;
   max-width: 1200px;
   align-items: stretch;
+  padding: 0px 20px;
 }
 
 
@@ -121,8 +124,10 @@ button {
     width: 100%;
     font-size: 14px;
   }
-  .landing-content{
+
+  .landing-content {
     height: 100%;
+    padding: 30px;
   }
 }
 
@@ -242,7 +247,7 @@ button {
 .hero-info {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--background-color);
   color: white;
@@ -255,8 +260,8 @@ button {
 
 @media (max-width: 768px) {
   .hero-info {
-    flex-direction: column;
     padding: 12px;
+    color: white;
   }
 }
 
@@ -373,7 +378,7 @@ button {
 
 /* about-section /////////////// */
 .about {
-  padding-top: 60px;
+  padding: 0 20px 60px;
 }
 
 .about h1 {
@@ -442,7 +447,7 @@ button {
 
 /* rent-manegment */
 .rent-manegment {
-  padding-bottom: 80px;
+  padding: 0 20px 80px;
 }
 
 .manegment-header {
@@ -465,7 +470,7 @@ button {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   ;
   grid-template-rows: auto;
   gap: 10px;
@@ -486,14 +491,14 @@ button {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 400px;
   text-align: right;
   padding: 15px;
   flex-direction: column;
 }
 
 .manegment-card {
-  height: 300px;
+  height: 400px;
   width: 100%;
   border-radius: 20px;
 }
@@ -505,6 +510,8 @@ button {
   width: 100%;
   text-align: right;
   font-weight: bold;
+  display: grid;
+  align-items: self-end;
 }
 
 #renters {
@@ -533,7 +540,7 @@ button {
 
 /* support //////////////// */
 .support {
-  padding-bottom: 30px;
+  padding: 0 30px 30px;
 }
 
 .sup-flex {
@@ -595,4 +602,3 @@ button {
 .support span {
   margin-top: 25px;
 }
-
