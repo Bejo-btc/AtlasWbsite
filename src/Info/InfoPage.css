@@ -18,7 +18,7 @@ li {
 }
 
 .info-img {
-   background-image: url("/public/Frame\ 2085663204.png");
+   background-image: url("/public/Frame 2085663195.webp");
    background-size: cover;
    background-position: center;
    width: 100%;
@@ -41,7 +41,7 @@ li {
 
 .info-content p {
    font-weight: bold;
-   color: white;
+   font-size: 2rem;
 }
 
 @media (max-width:765px) {

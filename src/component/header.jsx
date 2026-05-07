@@ -1,57 +1,50 @@
-import { Link } from "react-router-dom"
-import { useState } from "react"
-import "./header.css"
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import "./header.css";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <>
       <header>
+        {/* اللوجو */}
+        <div className="logo-container">
+          <img src="/image-5.jpg" alt="logo" className="logo" />
+        </div>
+
+        {/* النافيجيشن */}
+        <nav className={isOpen ? "open" : ""}>
+          <ul>
+            <li><Link to="/" onClick={closeMenu}>الرئيسية</Link></li>
+            <li><Link to="/InfoPage" onClick={closeMenu}>العقارات</Link></li>
+            <li><Link to="/homes" onClick={closeMenu}>الخدمات</Link></li>
+            <li><Link to="/contact" onClick={closeMenu}>التواصل</Link></li>
+          </ul>
+        </nav>
+
+        {/* زر تواصل معنا */}
         <Link to="/contact" className="contact-btn">
           <button>تواصل معنا</button>
         </Link>
-        
-        <div className="header-content">
-          <nav className={`nav ${isOpen ? 'open' : ''}`}>
-            <ul>
-              <Link to="/" onClick={closeMenu}>
-                <li>الرئيسية</li>
-              </Link>
-              <Link to="/infoPage" onClick={closeMenu}>
-                <li>العقارات</li>
-              </Link>
-              <Link to="/homes" onClick={closeMenu}>
-                <li>الخدمات</li>
-              </Link>
-              <Link to="/contact" onClick={closeMenu}>
-                <li>التواصل</li>
-              </Link>
-            </ul>
-          </nav>
-          
-          <div className="logo-container">
-            <img src="/image-5.jpg" alt="logo" className="logo" />
-          </div>
-        </div>
 
+        {/* زر الهامبرغر */}
+        <button
+          className={`burger-menu ${isOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+          aria-label="toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </header>
 
-      {/* Overlay for mobile menu */}
-      {isOpen && (
-        <div 
-          className="menu-overlay" 
-          onClick={closeMenu}
-        ></div>
-      )}
+      {/* الأوفرلاي */}
+      {isOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
     </>
   );
 }
