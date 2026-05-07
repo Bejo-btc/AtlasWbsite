@@ -25,13 +25,13 @@ function Footer() {
             </div>
             <div className='footer-grid'>
                <ul style={{ padding: '10px' }}>
-                  <li><a href="#">Feacbook</a></li>
-                  <li><a href="#">Instgram</a></li>
-                  <li><a href="#">Twitter</a></li>
-                  <li><a href="#">Youtube</a></li>
+                  <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i className="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i className="fab fa-youtube"></i></a></li>
                </ul>
-               <span style={{margin: "25px"}}> جميع الحقوق محفوظه</span>
-                  <Link to="/contact"> <button>تواصل معنا </button></Link>
+               <span style={{ margin: "25px" }}> جميع الحقوق محفوظه</span>
+               <Link to="/contact"> <button>تواصل معنا </button></Link>
             </div>
          </div>
       </footer>

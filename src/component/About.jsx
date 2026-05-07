@@ -6,21 +6,36 @@ function About() {
       <div className='about-info-flex'>
         <div className="about-info">
           <div className="about-card">
-            <h5>خبره واسعه في السوق العقاري العقاري</h5>
+            <h5>خبره واسعه في السوق العقاري</h5>
             <p>نطرح من 3 لي 4 عقارات جديده يويما, سكنيه واستثماريه بخيارات تناسب احتياجا وميزانيتك</p>
+            <div className="arrow-circle">
+              <i className="fas fa-arrow-up-right-from-square"></i>
+            </div>
           </div>
           <div className="about-card">
             <h5>خبره واسعه في السوق العقاري</h5>
             <p>نطرح من 3 لي 4 عقارات جديده يويما, سكنيه واستثماريه بخيارات تناسب احتياجا وميزانيتك</p>
+            <div className="arrow-circle">
+              <i className="fas fa-arrow-up-right-from-square"></i>
+            </div>
           </div>
           <div className="about-card">
             <h5>خبره واسعه في السوق العقاري</h5>
             <p>نطرح من 3 لي 4 عقارات جديده يويما, سكنيه واستثماريه بخيارات تناسب احتياجا وميزانيتك</p>
+            <div className="arrow-circle">
+              <i className="fas fa-arrow-up-right-from-square"></i>
+            </div>
           </div>
           <div className="about-card">
             <h5>خبره واسعه في السوق العقاري</h5>
             <p>نطرح من 3 لي 4 عقارات جديده يويما, سكنيه واستثماريه بخيارات تناسب احتياجا وميزانيتك</p>
+            <div className="arrow-circle">
+              <i className="fas fa-arrow-up-right-from-square"></i>
+            </div>
           </div>
+
+
+
         </div>
       </div>
 

@@ -19,24 +19,24 @@ function Contact() {
          </div>
          <div className="contact-info">
             <div className="card">
-               <i>icon</i>
+           <li><i className="fas fa-phone"></i></li>
                <div>
                   <h4>مواقعما</h4>
                   <span> الخرطوم شارع الصحافه</span>
                </div>
             </div>
             <div className="card">
-               <i>icon</i>
+             <li><i className="fas fa-location-dot"></i></li>
                <div>
-                  <h4>مواقعما</h4>
-                  <span> الخرطوم شارع الصحافه</span>
+                  <h4>ارقام التواصل </h4>
+                  <span>+249969929157</span>
                </div>
             </div>
             <div className="card">
-               <i>icon</i>
+    <li><i className="fas fa-envelope"></i></li>
                <div>
-                  <h4>مواقعما</h4>
-                  <span> الخرطوم شارع الصحافه</span>
+                  <h4>البريد الالكتروني</h4>
+                  <span>example@example.com</span>
                </div>
             </div>
          </div>
