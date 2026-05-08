@@ -32,6 +32,7 @@ function App() {
         <Route path="/InfoPage" element={<InfoPage />} />
         <Route path='/homes' element={<Homes />} />
         <Route path='/contact' element={<Contact />} />
+
       </Routes>
     </div>
   );
