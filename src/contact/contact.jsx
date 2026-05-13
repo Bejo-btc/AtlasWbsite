@@ -68,17 +68,18 @@ function Contact() {
             <div>
                <h1>خلينا نفهم احتياجاتك ونساعدك تختار القرار الصح بثقه ووضوح </h1>
                <span>تواصل مهنا</span>
-               <ul>
-                  <li><a href="#"><i className="fas-fa fas-faecbook">1</i></a></li>
-                  <li><a href="#"><i className="fas-fa fas-faecbook">2</i></a></li>
-                  <li><a href="#"><i className="fas-fa fas-faecbook">3</i></a></li>
-                  <li><a href="#"><i className="fas-fa fas-faecbook">4</i></a></li>
+                           <ul style={{ padding: '10px' }}>
+                  <li><a href="#">Feacbook</a></li>
+                  <li><a href="#">Instgram</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Youtube</a></li>
                </ul>
             </div>
          </div>
          {/*  */}
          <Footer />
       </div>
+      
    );
 }
 
