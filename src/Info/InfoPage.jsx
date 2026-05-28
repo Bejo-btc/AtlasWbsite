@@ -1,8 +1,7 @@
 import Header from '../component/header';
 import './InfoPage.css';
 import { Link } from 'react-router-dom';
-import AccordionSlider from "./AccordionSlider";
-
+import Houses_new from '../component/Houses_NEW';
 
 function Info() {
    return (
@@ -21,13 +20,9 @@ function Info() {
                </div>
             </div>
              <div className="houses-header">
-                  <select name="تصفيه" id="">تصفيه</select>
                   <h1>عقارات أطلس</h1>
                </div>
-            {/* cards section */}
-          <AccordionSlider />
-            {/* houses */}
-           
+           <Houses_new />
          </>
       </div>
    );

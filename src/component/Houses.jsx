@@ -1,4 +1,3 @@
-import AccordionSlider from "./AccordionSlider";
 import { Link } from "react-router-dom"
 function Houses() {
   return (
@@ -8,7 +7,6 @@ function Houses() {
         <p> أن تكون الخيار الاول غي المجال العقاري وأن تساهم تطوير مجتمعات عمرانيه مستدامه تعكس جوده الحياه </p>
         <h2>أحدث العقارات</h2>
       </div>
-        <AccordionSlider />
       <div className='houses-btn'>
            <Link to="/homes"> <button> ابدأ رحلتك العقاريه</button></Link>
       </div>
