@@ -22,13 +22,19 @@ li {
    background-size: cover;
    background-position: center;
    width: 100%;
-   height: 752px;
+   height: 500px;
    border-radius: 29px;
    padding: 0px 30px;
    margin-bottom: 20px;
-
 }
 
+@media (max-width: 768px) {
+   .info-img {
+      height: 300px;
+      border-radius: 15px;
+      padding: 0px 15px;
+   }
+}
 
 .info-content {
    text-align: right;
@@ -48,10 +54,6 @@ li {
       padding: 0px;
       color: white;
    }
-
-   nav {
-      display: none;
-   }
 }
 
 /*cards*/
@@ -60,7 +62,7 @@ li {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
    gap: 18px;
-   height: 800px;
+   height: auto;
    padding-bottom: 30px;
 }
 

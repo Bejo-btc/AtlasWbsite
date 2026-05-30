@@ -61,17 +61,19 @@ a {
 
 @media (max-width:767px) {
    .contact-land-img img {
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      width: 300px;
-      height: 90%;
-      z-index: 300;
-
+      display: none;
    }
-
-   header nav ul {
-      display: block;
+   
+   .contact {
+      height: 350px;
+      margin-bottom: 50px;
+   }
+   
+   .contact-land-info {
+      padding: 15px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
    }
 }
 
@@ -96,16 +98,17 @@ a {
 
 .contact-info .card {
    padding: 20px;
-   width: 200px;
-   height: 300px;
+   width: 250px;
+   height: 250px;
    background-color: #f4f4f4;
    text-align: center;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   align-items: space-between;
+   align-items: center;
    border-radius: 15px;
-   color: #243175
+   color: #243175;
+   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 /*/////////*/
@@ -138,6 +141,17 @@ a {
    .contact-info {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      padding: 0 20px;
+   }
+   
+   .contact-info .card {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      min-height: 180px;
+      padding: 20px;
+      gap: 15px;
    }
 
    .info-input {
@@ -154,7 +168,6 @@ a {
    cursor: pointer;
    border-radius: 20px;
    outline: none;
-
 }
 
 /* \\\\\\\\\\\\\\\\ */
@@ -182,10 +195,25 @@ a {
 }
 
 @media (max-width:676px) {
+   .links {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+   }
+
+   .links h1 {
+      font-size: 20px;
+      line-height: 1.4;
+   }
+
+   .links ul {
+      justify-content: center;
+      padding: 0;
+   }
+
    .links img {
       display: none;
    }
-
 }
 
 /* ]]]]]]]]]]] */
